@@ -1,0 +1,168 @@
+:root {
+  --bg: #f0f4f8;       /* page background */
+  --text: #1e293b;     /* main text */
+  --card: #e2e8f0;     /* card background (not white) */
+  --primary: #f97316;  /* buttons / CTA */
+}
+
+body.dark {
+  --bg: #1e293b;       /* dark background */
+  --text: #f1f5f9;     /* light text */
+  --card: #334155;     /* card background in dark mode */
+  --primary: #fb923c;  /* dark mode CTA */
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Sections */
+section {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.hero {
+  max-width: 700px;
+  margin: auto;
+}
+
+h1, h2 {
+  margin-bottom: 15px;
+}
+
+p {
+  opacity: 0.85;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Cards & Grids */
+.feature-grid,
+.testimonial-grid,
+.price-grid {
+  display: grid;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.feature-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.testimonial-grid,
+.price-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.card i {
+  font-size: 30px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.highlight {
+  border: 2px solid var(--primary);
+}
+
+/* CTA */
+.cta {
+  background: var(--primary);
+  color: white;
+}
+
+.cta .btn-primary {
+  background: white;
+  color: var(--primary);
+}
+
+/* PRICING */
+.pricing {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.price-grid .card {
+  background: var(--card);      /* soft colored card */
+  color: var(--text);
+  padding: 25px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.price-grid .card:hover {
+  transform: translateY(-5px);
+  border: 2px solid var(--primary);  /* highlight on hover */
+}
+
+.price-grid .card.highlight {
+  border: 2px solid var(--primary);
+  background: var(--card);
+}
+
+/* Price text */
+.price-grid .price {
+  font-size: 2rem;
+  margin: 15px 0;
+  color: var(--primary);
+}
+
+/* Buttons in pricing */
+.price-grid .btn-primary {
+  background: var(--primary);
+  color: var(--text);
+}
+
+.price-grid .btn-outline {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: transparent;
+}
