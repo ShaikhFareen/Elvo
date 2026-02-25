@@ -1,0 +1,85 @@
+/* Body and background */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url(cloud.PNG) no-repeat center center;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main container */
+.container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.4); /* semi-transparent */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  color: #222;
+  backdrop-filter: blur(8px); /* soft blur behind container */
+  transition: 0.3s ease;
+}
+
+/* Heading */
+h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #111;
+}
+
+/* City input */
+#cityInput {
+  padding: 10px;
+  font-size: 16px;
+  width: 80%;
+  margin-bottom: 20px;
+  border: 2px solid rgba(150, 150, 150, 0.5);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: border 0.3s;
+}
+
+#cityInput:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+/* Button */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Weather info */
+p {
+  font-size: 18px;
+  color: #222;
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  #cityInput {
+    width: 100%;
+  }
+}
